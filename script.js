@@ -22,7 +22,10 @@ var apiKey = "d7b6dcaa63c06de245782075294534f9";
   function searchWeather(searchValue) {
     $.ajax({
       type: "GET",
-      url: "http://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=" + apiKey + "&units=imperial",
+      url: "https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=" + apiKey + "&units=imperial",
+      headers: {
+        'Access-Control-Allow-Origin':'localhost:5500'
+      },
       dataType: "json",
       success: function(data) {
         // create history link for this search
@@ -61,7 +64,10 @@ var apiKey = "d7b6dcaa63c06de245782075294534f9";
   function getForecast(searchValue) {
     $.ajax({
       type: "GET",
-      url: "http://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=" + apiKey + "&units=imperial",
+      url: "https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=" + apiKey + "&units=imperial",
+      headers: {
+        'Access-Control-Allow-Origin':'localhost:5500'
+      },
       dataType: "json",
       success: function(data) {
         // overwrite any existing content with title and empty row
@@ -95,7 +101,10 @@ var apiKey = "d7b6dcaa63c06de245782075294534f9";
   function getUVIndex(lat, lon) {
     $.ajax({
       type: "GET",
-      url: "http://api.openweathermap.org/data/2.5/uvi?appid=" + apiKey + "&lat=" + lat + "&lon=" + lon,
+      url: "https://cors-anywhere.herokuapp.com/api.openweathermap.org/data/2.5/uvi?appid=" + apiKey + "&lat=" + lat + "&lon=" + lon,
+      headers: {
+        'Access-Control-Allow-Origin':'localhost:5500'
+      },
       dataType: "json",
       success: function(data) {
         var uv = $("<p>").text("UV Index: ");
