@@ -14,7 +14,7 @@ Create a weather dashboard that will run in the browser and feature dynamically 
 Screenshots of the completed application are below:
 
 **Main Page**
-![](./public/assets/homepage.png)
+![](./homepage.png)
 
 
 ## Installation
