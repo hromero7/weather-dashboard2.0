@@ -64,7 +64,7 @@ var apiKey = "d7b6dcaa63c06de245782075294534f9";
   function getForecast(searchValue) {
     $.ajax({
       type: "GET",
-      url: "https:/api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=" + apiKey + "&units=imperial",
+      url: "https://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=" + apiKey + "&units=imperial",
       // headers: {
       //   'Access-Control-Allow-Origin':'localhost:5500'
       // },
@@ -101,7 +101,7 @@ var apiKey = "d7b6dcaa63c06de245782075294534f9";
   function getUVIndex(lat, lon) {
     $.ajax({
       type: "GET",
-      url: "https:/api.openweathermap.org/data/2.5/uvi?appid=" + apiKey + "&lat=" + lat + "&lon=" + lon,
+      url: "https://api.openweathermap.org/data/2.5/uvi?appid=" + apiKey + "&lat=" + lat + "&lon=" + lon,
       // headers: {
       //   'Access-Control-Allow-Origin':'localhost:5500'
       // },
